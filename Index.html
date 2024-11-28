@@ -11,9 +11,11 @@
 <body>
     <div id="app">
         <div>
+            <input placeholder="Find a Artist" type="text" v-model="sortByArtist">
+            <input placeholder="Find a Title" type="text" v-model="sortByTitle">
             <button id="getrecords" v-on:click="GetRecords">Show Records</button>
             <ul id="allrecords">
-                <li v-for="record in records">Title: {{record.title}}, Duration: {{record.duration}}, PublicationYear: {{record.publicationYear}}</li>
+                <li v-for="record in records">Title: {{record.title}}, Artist: {{record.artist}} Duration: {{record.duration}}, PublicationYear: {{record.publicationYear}}</li>
             </ul>
         </div>
     </div>
